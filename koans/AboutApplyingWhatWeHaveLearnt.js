@@ -106,6 +106,7 @@ describe("About Applying What We Have Learnt", function() {
 
   /*********************************************************************************/
   /* UNCOMMENT FOR EXTRA CREDIT */
+
   it("should find the largest prime factor of a composite number", function () {
 
     function largestPrimeFactor(number) {
@@ -183,7 +184,21 @@ describe("About Applying What We Have Learnt", function() {
   });
 
   it("should find the difference between the sum of the squares and the square of the sums", function () {
+    function sumSquare(num) {
+      return Math.pow(num, 2) * 2;
+    }
 
+    function squareSum(num) {
+      return Math.pow(num * 2, 2);
+    }
+
+    function diffCalc(num) {
+      return sumSquare(num) - squareSum(num);
+    }
+
+    expect(diffCalc(5)).toBe(-50);
+    expect(diffCalc(10)).toBe(-200);
+    expect(diffCalc(537)).toBe(-576738);
   });
 
   it("should find the 10001st prime", function () {

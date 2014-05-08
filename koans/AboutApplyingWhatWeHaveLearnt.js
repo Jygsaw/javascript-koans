@@ -132,6 +132,24 @@ describe("About Applying What We Have Learnt", function() {
   });
 
   it("should find the smallest number divisible by each of the numbers 1 to 20", function () {
+    function numSearch() {
+      var num = 1;
+      var found = false;
+      while (!found) {
+        var divCheck = true;
+        for (var i = 1; i <= 20 && divCheck; i++) {
+          if (num % i !== 0) divCheck = false;
+        }
+        if (divCheck) {
+          found = true;
+        } else {
+          num++;
+        }
+      }
+      return num;
+    }
+
+    expect(numSearch()).toBe(232792560);
   });
 
   it("should find the difference between the sum of the squares and the square of the sums", function () {

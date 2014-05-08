@@ -157,6 +157,7 @@ describe("About Applying What We Have Learnt", function() {
     expect(palindromeCheck("mike")).toBe(false);
     expect(palindromeCheck(99908999)).toBe(false);
 
+    expect(palindromeSearch(99, 99)).toBe(9009)
     expect(palindromeSearch(999, 999)).toBe(90909)
   });
 
@@ -182,6 +183,7 @@ describe("About Applying What We Have Learnt", function() {
   });
 
   it("should find the difference between the sum of the squares and the square of the sums", function () {
+
   });
 
   it("should find the 10001st prime", function () {
